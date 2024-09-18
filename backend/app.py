@@ -6,7 +6,8 @@ import random
 import os
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins for now
 
 phrases = [
     "Hello, World!",

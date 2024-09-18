@@ -1,5 +1,3 @@
-// frontend/src/App.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -24,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <h1>My New App</h1>
-      <p>{message}</p>
+      <p>{message || 'Loading...'}</p>
       <button onClick={fetchRandomPhrase}>Get Random Phrase</button>
       {phrase && <p>{phrase}</p>}
     </div>
